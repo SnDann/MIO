@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
+OPENAI_API_KEY=sk-... (sua chave aqui)
