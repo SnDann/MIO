@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.myapplication.ui.task.TaskListFragment"
+        android:label="Tarefas"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/action_taskListFragment_to_taskFormFragment"
+            app:destination="@id/taskFormFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_eventListFragment"
+            app:destination="@id/eventListFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_recommendationFragment"
+            app:destination="@id/recommendationFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/taskFormFragment"
+        android:name="com.example.myapplication.ui.task.TaskFormFragment"
+        android:label="Nova Tarefa"
+        tools:layout="@layout/fragment_task_form" />
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.myapplication.ui.event.EventListFragment"
+        android:label="Eventos"
+        tools:layout="@layout/fragment_task_list">
+        <action
+            android:id="@+id/action_eventListFragment_to_eventFormFragment"
+            app:destination="@id/eventFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/eventFormFragment"
+        android:name="com.example.myapplication.ui.event.EventFormFragment"
+        android:label="Novo Evento"
+        tools:layout="@layout/fragment_task_form" />
+
+    <fragment
+        android:id="@+id/recommendationFragment"
+        android:name="com.example.myapplication.ui.recommendation.RecommendationFragment"
+        android:label="Recomendações"
+        tools:layout="@layout/fragment_recommendation" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.myapplication.ui.chat.ChatFragment"
+        android:label="Chat IA"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.myapplication.ui.device.DeviceListFragment"
+        android:label="Dispositivos"
+        tools:layout="@layout/fragment_device_list">
+        <action
+            android:id="@+id/action_deviceListFragment_to_deviceFormFragment"
+            app:destination="@id/deviceFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceFormFragment"
+        android:name="com.example.myapplication.ui.device.DeviceFormFragment"
+        android:label="Cadastro de Dispositivo"
+        tools:layout="@layout/fragment_device_form">
+        <argument
+            android:name="deviceId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation> 

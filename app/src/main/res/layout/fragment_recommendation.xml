@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewRecommendationsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendações do Dia"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/textViewRecommendations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma recomendação disponível."/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <EditText
+        android:id="@+id/editTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pergunte algo para a IA..." />
+
+    <Button
+        android:id="@+id/buttonAskAI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perguntar à IA" />
+
+    <TextView
+        android:id="@+id/textViewAIResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resposta da IA aparecerá aqui."
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout> 
